@@ -1,6 +1,7 @@
 import discord
+from discord.ext import commands
 
-bot = discord.Client()
+bot = commands.Bot(command_prefix='!', description='EVP Bot for Seeing The Elite')
 
 
 @bot.event
@@ -11,17 +12,22 @@ async def on_member_join(member):
         await guild.system_channel.send(to_send)
 
 
-@bot.command()
+@bot.command(description='Give us a Tooooo Sweet')
 async def toosweet(ctx):
     await ctx.send('https://tenor.com/view/bullet-club-too-sweet-wrestlers-gif-11235479')
 
 
-@bot.command()
+@bot.command(description='A hug from the best friends to a best friend')
 async def hug(ctx):
     await ctx.send('https://tenor.com/view/aew-trent-beretta-chuck-taylor-orange-cassidy-best-friends-gif-14962323')
 
-# @bot.command()
-# async def lechampion(ctx)
-#     await
+
+@bot.command()
+async def lechampion(ctx):
+    await ctx.send('https://tenor.com/view/aew-chris-jericho-bubbly-gif-15099023')
 
 bot.run()
+
+# https://tenor.com/view/too-sweet-gif-9536867
+# https://tenor.com/view/too_sweet-kenny_omega-young_bucks-red_shoes-gif-9909622
+# https://tenor.com/view/adam-cole-nxt-bulletclub-baybay-adam-gif-12121153
