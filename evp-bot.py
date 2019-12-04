@@ -1,7 +1,13 @@
 import discord
 from discord.ext import commands
+import random
 
 bot = commands.Bot(command_prefix='!', description='EVP Bot for Seeing The Elite')
+
+tooSweetList = ['https://tenor.com/view/too-sweet-gif-9536867',
+                'https://tenor.com/view/too_sweet-kenny_omega-young_bucks-red_shoes-gif-9909622',
+                'https://tenor.com/view/adam-cole-nxt-bulletclub-baybay-adam-gif-12121153',
+                'https://tenor.com/view/bullet-club-too-sweet-wrestlers-gif-11235479']
 
 
 @bot.event
@@ -14,7 +20,7 @@ async def on_member_join(member):
 
 @bot.command(description='Give us a Tooooo Sweet')
 async def toosweet(ctx):
-    await ctx.send('https://tenor.com/view/bullet-club-too-sweet-wrestlers-gif-11235479')
+    await ctx.send(random.choice(tooSweetList))
 
 
 @bot.command(description='A hug from the best friends to a best friend')
@@ -28,6 +34,3 @@ async def lechampion(ctx):
 
 bot.run()
 
-# https://tenor.com/view/too-sweet-gif-9536867
-# https://tenor.com/view/too_sweet-kenny_omega-young_bucks-red_shoes-gif-9909622
-# https://tenor.com/view/adam-cole-nxt-bulletclub-baybay-adam-gif-12121153
