@@ -32,5 +32,10 @@ async def hug(ctx):
 async def lechampion(ctx):
     await ctx.send('https://tenor.com/view/aew-chris-jericho-bubbly-gif-15099023')
 
+
+@bot.command()
+async def britt(ctx):
+    await ctx.send('https://tenor.com/view/britt-baker-concerned-worried-pray-prays-gif-15698479')
+
 bot.run()
 
